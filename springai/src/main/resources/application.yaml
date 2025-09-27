@@ -9,3 +9,7 @@ spring:
         options:
           model: qwen-max # ????
           temperature: 0.8 # ????????????????
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
+    org.example.springai: debug
