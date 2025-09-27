@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springai
+  ai:
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: sk-8330804b64e047989db881f364c5c5ca
+      chat:
+        options:
+          model: qwen-max # ????
+          temperature: 0.8 # ????????????????
