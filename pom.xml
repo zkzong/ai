@@ -14,4 +14,9 @@
         <spring-ai.version>1.0.2</spring-ai.version>
     </properties>
 
+    <modules>
+        <module>springai</module>
+        <module>my-mcp-server</module>
+    </modules>
+
 </project>
