@@ -8,3 +8,9 @@ spring-ai-protal
 # MCP
 
 my-mcp-server
+
+```json
+"my-weather-mcp-server": {
+    "url":"http://localhost:8080/sse"
+}
+```
