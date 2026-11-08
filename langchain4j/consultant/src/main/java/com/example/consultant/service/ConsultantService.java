@@ -8,7 +8,8 @@ import reactor.core.publisher.Flux;
 @AiService(
         wiringMode = AiServiceWiringMode.EXPLICIT,
         chatModel = "openAiChatModel",
-        streamingChatModel = "openAiStreamingChatModel"
+        streamingChatModel = "openAiStreamingChatModel",
+        chatMemory = "chatMemory"
 )
 //@AiService
 public interface ConsultantService {

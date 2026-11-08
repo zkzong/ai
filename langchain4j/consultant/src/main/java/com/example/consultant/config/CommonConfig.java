@@ -1,15 +1,13 @@
-//package com.example.consultant.config;
-//
-//import com.example.consultant.service.ConsultantService;
-//import dev.langchain4j.model.openai.OpenAiChatModel;
-//import dev.langchain4j.service.AiServices;
-//import jakarta.annotation.Resource;
-//import org.springframework.context.annotation.Bean;
-//import org.springframework.context.annotation.Configuration;
-//
-//@Configuration
-//public class CommonConfig {
-//
+package com.example.consultant.config;
+
+import dev.langchain4j.memory.ChatMemory;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class CommonConfig {
+
 //    @Resource
 //    private OpenAiChatModel model;
 //
@@ -20,4 +18,14 @@
 //                .build();
 //        return cs;
 //    }
-//}
+
+    // 构建会话记忆对象
+    @Bean
+    public ChatMemory chatMemory() {
+        MessageWindowChatMemory memory = MessageWindowChatMemory.builder()
+                .maxMessages(20)
+                .build();
+        return memory;
+    }
+
+}
