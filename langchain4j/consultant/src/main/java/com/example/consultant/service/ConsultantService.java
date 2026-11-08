@@ -1,6 +1,8 @@
 package com.example.consultant.service;
 
+import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.spring.AiService;
 import dev.langchain4j.service.spring.AiServiceWiringMode;
 import reactor.core.publisher.Flux;
@@ -9,7 +11,8 @@ import reactor.core.publisher.Flux;
         wiringMode = AiServiceWiringMode.EXPLICIT,
         chatModel = "openAiChatModel",
         streamingChatModel = "openAiStreamingChatModel",
-        chatMemory = "chatMemory"
+//        chatMemory = "chatMemory"
+        chatMemoryProvider = "chatMemoryProvider"
 )
 //@AiService
 public interface ConsultantService {
@@ -22,6 +25,6 @@ public interface ConsultantService {
 //    @UserMessage("你是Z的小助手，人美心善又多金！{{it}}")
 //        @UserMessage("你是Z的小助手，人美心善又多金！{{msg}}")
 //    public Flux<String> chat(@V("msg") String message);
-    public Flux<String> chat(String message);
+    public Flux<String> chat(@MemoryId String memoryId, @UserMessage String message);
 
 }
