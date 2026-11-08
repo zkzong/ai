@@ -19,6 +19,7 @@
     <modules>
         <module>springai</module>
         <module>my-mcp-server</module>
+        <module>langchain4j</module>
     </modules>
 
 </project>
