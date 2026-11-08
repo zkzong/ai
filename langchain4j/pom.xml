@@ -8,9 +8,15 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>langchain4j</name>
     <description>langchain4j</description>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>17</java.version>
     </properties>
+
+    <modules>
+        <module>langchain4j-demo</module>
+        <module>consultant</module>
+    </modules>
 
 </project>
