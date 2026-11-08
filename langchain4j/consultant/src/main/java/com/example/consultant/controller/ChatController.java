@@ -4,6 +4,7 @@ import com.example.consultant.service.ConsultantService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 @RestController
 public class ChatController {
@@ -20,9 +21,15 @@ public class ChatController {
     @Resource
     private ConsultantService consultantService;
 
-    @RequestMapping("/chat")
-    public String chat(String message) {
-        String result = consultantService.chat(message);
+//    @RequestMapping("/chat")
+//    public String chat(String message) {
+//        String result = consultantService.chat(message);
+//        return result;
+//    }
+
+    @RequestMapping(value = "/chat", produces = "text/html;charset=UTF-8")
+    public Flux<String> chat(String message) {
+        Flux<String> result = consultantService.chat(message);
         return result;
     }
 }
