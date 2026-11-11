@@ -1,18 +1,23 @@
 spring:
   application:
     name: consultant
+  data:
+    redis:
+      host: 192.168.163.128
+      port: 6379
+      password: redis
 
 langchain4j:
   open-ai:
     chat-model:
-      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
-      api-key: sk-447d9c2836554791a4b3087ef21811e6
+      base-url: https://llm-f3k2qi1msp50xikq.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: ${BAILIAN_API_KEY}
       model-name: deepseek-v4-pro-0813
       log-requests: true
       log-responses: true
     streaming-chat-model:
-      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
-      api-key: sk-447d9c2836554791a4b3087ef21811e6
+      base-url: https://llm-f3k2qi1msp50xikq.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: ${BAILIAN_API_KEY}
       model-name: deepseek-v4-pro-0813
       log-requests: true
       log-responses: true
