@@ -1,4 +1,4 @@
-package com.example.consultant.service;
+package com.example.consultant.aiservice;
 
 import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
@@ -13,7 +13,8 @@ import reactor.core.publisher.Flux;
         streamingChatModel = "openAiStreamingChatModel",
 //        chatMemory = "chatMemory", // 配置会话记忆对象
         chatMemoryProvider = "chatMemoryProvider", // 配置会话记忆提供者对象
-        contentRetriever = "contentRetriever" // 配置向量数据库检索对象
+        contentRetriever = "contentRetriever", // 配置向量数据库检索对象
+        tools = "reservationTool"
 )
 //@AiService
 public interface ConsultantService {

@@ -1,6 +1,6 @@
 package com.example.consultant.controller;
 
-import com.example.consultant.service.ConsultantService;
+import com.example.consultant.aiservice.ConsultantService;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
