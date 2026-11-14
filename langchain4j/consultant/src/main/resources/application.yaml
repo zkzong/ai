@@ -5,7 +5,7 @@ spring:
     redis:
       host: 192.168.163.128
       port: 6379
-      password: redis
+#      password: redis
 
 langchain4j:
   open-ai:
@@ -21,6 +21,17 @@ langchain4j:
       model-name: glm-5.3
       log-requests: true
       log-responses: true
+    embedding-model:
+      base-url: https://llm-f3k2qi1msp50xikq.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      api-key: ${BAILIAN_API_KEY}
+      model-name: qwen3.7-text-embedding-flash
+      log-requests: true
+      log-responses: true
+      max-segments-per-batch: 10
+  community:
+    redis:
+      host: 192.168.163.128
+      port: 6379
 
 logging:
   level:
