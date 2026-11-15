@@ -20,6 +20,7 @@
         <module>springai</module>
         <module>my-mcp-server</module>
         <module>langchain4j</module>
+        <module>langchain4j-tuling</module>
     </modules>
 
 </project>
