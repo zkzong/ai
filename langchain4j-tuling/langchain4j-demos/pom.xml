@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <langchain4j.version>1.0.0-beta1</langchain4j.version>
+        <dashscope.version>2.23.6</dashscope.version>
     </properties>
 
     <dependencies>
@@ -41,6 +42,12 @@
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-community-dashscope</artifactId>
             <version>${langchain4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dashscope-sdk-java</artifactId>
+            <version>${dashscope.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
