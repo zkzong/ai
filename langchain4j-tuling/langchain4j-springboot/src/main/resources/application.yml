@@ -1,0 +1,9 @@
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        api-key: ${BAILIAN_API_KEY}
+        model-name: glm-5.3
+      streaming-chat-model:
+        api-key: ${BAILIAN_API_KEY}
+        model-name: glm-5.3
